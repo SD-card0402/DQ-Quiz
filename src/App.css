@@ -1,0 +1,257 @@
+/* -------------------- */
+/* 全体設定 */
+/* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eef3f7;
+    font-family: "Yu Gothic UI", "Meiryo", sans-serif;
+    color: #333;
+}
+
+/* -------------------- */
+/* ゲーム画面 */
+/* -------------------- */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    text-align: center;
+}
+
+/* -------------------- */
+/* タイトル */
+/* -------------------- */
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+h2 {
+    margin: 15px 0;
+    color: #000000;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #1976d2;
+}
+
+/* -------------------- */
+/* キャラクター画像 */
+/* -------------------- */
+
+.character {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+    transition: transform .3s;
+}
+
+.character:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------- */
+/* ボタン */
+/* -------------------- */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    margin: 25px auto;
+}
+
+button {
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3498db;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+/* -------------------- */
+/* 正誤メッセージ */
+/* -------------------- */
+
+.message {
+    margin-top: 20px;
+    min-height: 35px;
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+}
+
+/* -------------------- */
+/* タブレット */
+/* -------------------- */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .character {
+        width: 250px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+/* -------------------- */
+/* スマホ */
+/* -------------------- */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .character {
+        width: 180px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .message {
+        font-size: 1.1rem;
+    }
+}
+.result{
+
+    width:90%;
+    max-width:600px;
+
+    margin:60px auto;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.result h1{
+
+    margin:20px 0;
+
+}
+
+.result h2{
+
+    color:hsl(0, 0%, 0%);
+
+    margin-top:20px;
+
+}
+
+.restartButton{
+
+    margin-top:40px;
+
+    width:250px;
+
+    padding:15px;
+
+    font-size:20px;
+
+    background:#27ae60;
+
+}
+
+.restartButton:hover{
+
+    background:#219150;
+
+}
+button:disabled{
+
+    background:#bdbdbd;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    opacity:.7;
+
+}
