@@ -1,6 +1,6 @@
+
 import { useState } from "react";
 import "./App.css";
-
 import slime from "./assets/slime.png";
 import king from "./assets/king.png";
 // import kirby from "./images/kirby.png";
