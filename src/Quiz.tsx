@@ -1,4 +1,5 @@
-import { Question } from "./questions";
+import styles from "./App.module.css";
+import type { Question } from "./questions";
 
 type QuizProps = {
     current: Question;
@@ -21,25 +22,25 @@ function Quiz({
 }: QuizProps) {
 
     return (
-        <div className="screen">
-            <div className="container">
+        <div className={styles.screen}>
+            <div className={styles.container}>
                 <h1>DQモンスタークイズ</h1>
                 <h2>問題 {index + 1} / {total}</h2>
                 <img src={current.image} alt="キャラクター"
-                className="character"
-            />
-            <div className="buttons">
-                {current.choices.map((choice) => (
-                    <button
-                        key={choice}
-                        onClick={() => onAnswer(choice)}
-                        disabled={isAnswered}
-                    >
-                        {choice}
-                    </button>
-                ))}
-            </div>
-                <h2 className="message">{message}</h2>
+                    className={styles.character}
+                />
+                <div className={styles.buttons}>
+                    {current.choices.map((choice) => (
+                        <button
+                            key={choice}
+                            onClick={() => onAnswer(choice)}
+                            disabled={isAnswered}
+                        >
+                            {choice}
+                        </button>
+                    ))}
+                </div>
+                <h2 className={styles.message}>{message}</h2>
                 <h3>スコア：{score}</h3>
             </div>
         </div>

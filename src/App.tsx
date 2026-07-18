@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-import "./App.css";
+import styles from "./App.module.css";
 
 import Home from "./Home";
 import Quiz from "./Quiz";
 import Result from "./Result";
 
-import {
-    Question,
-    questions,
-} from "./questions";
+import { questions } from "./questions";
+import type { Question } from "./questions";
 
 const shuffleArray = (array: Question[]) =>
     [...array].sort(() => Math.random() - 0.5);
@@ -103,29 +101,17 @@ function App() {
 
     };
 
-    switch (screen) {
-
-        case "home":
-
-            return (
-                <Home
-                    onStart={startGame}
-                />
-            );
-
-        case "result":
-
-            return (
+    return (
+        <div className={styles.app}>
+            {screen === "home" ? (
+                <Home onStart={startGame} />
+            ) : screen === "result" ? (
                 <Result
                     score={score}
                     total={gameQuestions.length}
                     onRestart={restartGame}
                 />
-            );
-
-        default:
-
-            return (
+            ) : (
                 <Quiz
                     current={current}
                     index={index}
@@ -135,9 +121,9 @@ function App() {
                     isAnswered={isAnswered}
                     onAnswer={checkAnswer}
                 />
-            );
-
-    }
+            )}
+        </div>
+    );
 
 }
 

@@ -1,25 +1,27 @@
+import styles from "./App.module.css";
+
 type HomeProps = {
     onStart: () => void;
 };
 
 function Home({ onStart }: HomeProps) {
     return (
-    <div className="home">
-    <div className="home-window">
-        <h1 className="game-title">DQモンスタークイズ</h1>
-        <p className="game-text">
-            モンスターの画像を見て<br />
-            正しい名前を選びましょう！
-        </p>
+        <div className={styles.home}>
+            <div className={styles.homeWindow}>
+                <h1 className={styles.gameTitle}>DQモンスタークイズ</h1>
+                <p className={styles.gameText}>
+                    モンスターの画像を見て<br />
+                    正しい名前を選びましょう！
+                </p>
 
-    <button
-        className="startButton"
-        onClick={onStart}
-    >
-        ▶ はじめる
-    </button>
-    </div>
-</div>
+                <button
+                    className={styles.startButton}
+                    onClick={onStart}
+                >
+                    ▶ はじめる
+                </button>
+            </div>
+        </div>
     );
 }
 
