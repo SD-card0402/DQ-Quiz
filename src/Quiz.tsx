@@ -21,24 +21,15 @@ function Quiz({
 }: QuizProps) {
 
     return (
-        <div className="container">
-
-            <h1>DQモンスタークイズ</h1>
-
-            <h2>
-                問題 {index + 1} / {total}
-            </h2>
-
-            <img
-                src={current.image}
-                alt="キャラクター"
+        <div className="screen">
+            <div className="container">
+                <h1>DQモンスタークイズ</h1>
+                <h2>問題 {index + 1} / {total}</h2>
+                <img src={current.image} alt="キャラクター"
                 className="character"
             />
-
             <div className="buttons">
-
                 {current.choices.map((choice) => (
-
                     <button
                         key={choice}
                         onClick={() => onAnswer(choice)}
@@ -46,19 +37,11 @@ function Quiz({
                     >
                         {choice}
                     </button>
-
                 ))}
-
             </div>
-
-            <h2 className="message">
-                {message}
-            </h2>
-
-            <h3>
-                スコア：{score}
-            </h3>
-
+                <h2 className="message">{message}</h2>
+                <h3>スコア：{score}</h3>
+            </div>
         </div>
     );
 }
