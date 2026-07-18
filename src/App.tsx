@@ -1,10 +1,7 @@
-
 import { useState } from "react";
 import "./App.css";
 import slime from "./assets/slime.png";
 import king from "./assets/king.png";
-// import kirby from "./images/kirby.png";
-// import pikachu from "./images/pikachu.png";
 
 // 問題データの型
 type Question = {
@@ -23,17 +20,7 @@ const questions: Question[] = [
     image: king,
     answer: "キング",
     choices: ["キング", "ルイージ", "カービィ", "ピカチュウ"],
-  },
-  // {
-  //   image: kirby,
-  //   answer: "カービィ",
-  //   choices: ["マリオ", "ルイージ", "カービィ", "ピカチュウ"],
-  // },
-  // {
-  //   image: pikachu,
-  //   answer: "ピカチュウ",
-  //   choices: ["マリオ", "ルイージ", "カービィ", "ピカチュウ"],
-  // },
+  }
 ];
 
 // 問題をシャッフル
