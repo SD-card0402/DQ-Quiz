@@ -13,6 +13,146 @@ body {
     font-family: "Yu Gothic UI", "Meiryo", sans-serif;
     color: #333;
 }
+/*==========================
+        ホーム画面
+==========================*/
+
+/*========================
+    ドット風RPGホーム画面
+========================*/
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#001b5b;
+    background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:32px 32px;
+    image-rendering:pixelated;
+    overflow-x:hidden;
+}
+
+/* 全画面中央 */
+
+.home{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+}
+
+/* RPGウィンドウ */
+
+.home-window{
+
+    width:700px;
+    max-width:95%;
+    padding:40px;
+    background:#0837a8;
+    border:6px solid white;
+    outline:6px solid #444;
+    text-align:center;
+    box-shadow:12px 12px 0 black;
+}
+
+/* タイトル */
+
+.game-title{
+    color:white;
+    font-size:48px;
+    letter-spacing:2px;
+    margin-bottom:40px;
+    text-shadow:
+        3px 3px #000;
+}
+
+/* 説明 */
+
+.game-text{
+    color:white;
+    font-size:24px;
+    line-height:2;
+    margin-bottom:50px;
+    text-shadow:2px 2px #000;
+}
+
+/* ボタン */
+
+.startButton{
+    width:300px;
+    height:70px;
+    border:none;
+    background:#2f7fff;
+    color:white;
+    font-size:26px;
+    font-weight:bold;
+    cursor:pointer;
+    border:4px solid white;
+    outline:4px solid black;
+    transition:.15s;
+    box-shadow:6px 6px black;
+}
+
+.startButton:hover{
+    background:#4c93ff;
+}
+
+.startButton:active{
+    transform:translate(4px,4px);
+    box-shadow:2px 2px black;
+}
+
+/*========================
+        タブレット
+========================*/
+
+@media(max-width:768px){
+
+    .home-window{
+        padding:30px;
+    }
+    .game-title{
+        font-size:36px;
+    }
+    .game-text{
+        font-size:20px;
+    }
+    .startButton{
+        width:230px;
+        height:60px;
+        font-size:22px;
+    }
+}
+
+/*========================
+        スマホ
+========================*/
+
+@media(max-width:480px){
+
+    .game-title{
+        font-size:28px;
+    }
+    .game-text{
+        font-size:16px;
+    }
+    .startButton{
+    width:180px;
+        height:50px;
+        font-size:18px;
+    }
+}
 
 /* -------------------- */
 /* ゲーム画面 */
